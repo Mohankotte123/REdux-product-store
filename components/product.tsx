@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/store";
 import { Action } from "redux";
 import { ThunkDispatch } from "redux-thunk";
-import { Update } from "store/productstore/productAction";
 import { useRouter } from 'next/router'
 
 interface ItemProps {
