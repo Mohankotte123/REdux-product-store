@@ -1,10 +1,10 @@
 import * as types from '../types'
 import { Dispatch } from '../store'
-import { GridItemsAlignment } from '@material-ui/core';
+
 
 
 function dummyTimeOut(seconds: number): Promise<void> {
-    return new Promise<void>((resolve, reject) => {
+    return new Promise<void>((resolve) => {
         setTimeout(() => {
             resolve();
         }, seconds)

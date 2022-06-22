@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { itemsState } from 'store/productstore/productReducer'
 import { RootState } from 'store/store'
 import 'bootstrap/dist/css/bootstrap.css';
-import Carousel from 'react-bootstrap/Carousel';
+import Image from 'next/image'
 
 
 
@@ -22,8 +22,8 @@ function showpdt() {
     {Shows ? (
 <div className="app">
     <div className='details'>
-        <div className="big-img">
-            <img src = {Shows.productImage[0]} alt=""/>
+        <div className="big-Image">
+            <Image src = {Shows.productImage[0]} alt=""/>
         </div>
          <div className="box">
             <div className="row">
@@ -32,10 +32,10 @@ function showpdt() {
              </div>
             <p>{Shows.Description}</p>
              <div className="thumb">
-             <img src={Shows.productImage[0]} alt=""/>
-                <img src={Shows.productImage[1]} alt=""/>
-                <img src={Shows.productImage[2]} alt=""/>
-                <img src={Shows.productImage[3]} alt=""/>
+             <Image src={Shows.productImage[0]} alt=""/>
+                <Image src={Shows.productImage[1]} alt=""/>
+                <Image src={Shows.productImage[2]} alt=""/>
+                <Image src={Shows.productImage[3]} alt=""/>
              </div>
              <button className="cart">Add to cart</button>
          </div>

@@ -5,17 +5,7 @@ import { RootState } from '../store/store'
 import Product from '../components/product';
 import Showpdt from '../components/showpdt';
 import {
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
-  Th,
-  Td,
-  TableCaption,
-  TableContainer,
-  Flex,
-  Spacer,
+   Flex,
   Box,
   Grid,
 } from '@chakra-ui/react'
@@ -41,12 +31,7 @@ export default function Home() {
    const dispatch = useDispatch<ThunkDispatch<RootState, {}, Action<string>>>();
    const router = useRouter() 
 
-   useEffect(() => {
-    if(Items == null) {
-       dispatch(Get())
-    
-        }
-  }, [])  
+   
 
   
 
