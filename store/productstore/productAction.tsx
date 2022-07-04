@@ -12,7 +12,7 @@ function dummyTimeOut(seconds: number): Promise<void> {
 } 
 
 export type item = {productName: string, price: string ,productImage:string[], Description: string, id:number};
-export type form ={ add:boolean , isEdit:boolean , Current:item };
+export type form ={Current:item };
 
 
 

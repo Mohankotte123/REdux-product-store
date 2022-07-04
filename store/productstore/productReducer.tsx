@@ -3,7 +3,7 @@ import * as types from '../types'
 export type images = {image1:string , image2:string ,image3:string ,image4:string}
 export type item = {productName: string, price:string,productImage:string[], Description: string, id:number
 } 
-export type form = {add:boolean , isEdit:boolean , Current:item}
+export type form = {Current:item}
 
  interface itemAction {
      type:string | boolean,
@@ -23,9 +23,8 @@ const initialState : itemsState = {
     Items:null,
     Forms:
     {
-        add:true , 
-        isEdit:false,
-        Current:{productName:"", price:null ,productImage:[], Description: "", id:null}
+        
+        Current:null
     },
     Shows:null,
    
