@@ -4,7 +4,7 @@ import { Action } from "redux";
 import { ThunkDispatch } from "redux-thunk";
 import { itemsState } from "store/productstore/productReducer";
 import { RootState } from "store/store";
-import AddProduct from "../components/Product-Form";
+import AddProduct from "components/Product-Form";
 import { useRouter } from "next/router";
 import { Form, Get, Update } from "store/productstore/productAction";
 
