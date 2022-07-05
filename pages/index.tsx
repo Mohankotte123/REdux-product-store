@@ -1,8 +1,8 @@
-import { RootState } from "../store/store";
-import Product from "../components/Product";
+import { RootState } from "store/store";
+import Product from "components/Product";
 import { Flex, Box, Grid } from "@chakra-ui/react";
-import Navbar from "../components/Navbar";
-import { itemsState } from "../store/productstore/productReducer";
+import Navbar from "components/Navbar";
+import { itemsState } from "store/productstore/productReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { Action } from "redux";
 import { ThunkDispatch } from "redux-thunk";
