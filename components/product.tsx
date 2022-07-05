@@ -10,7 +10,7 @@ interface ItemProps {
   showProduct: (id: number) => void;
 }
 
-function Product(itemProps: ItemProps) {
+function SingleProduct(itemProps: ItemProps) {
   return (
     <>
       <Image
@@ -69,4 +69,4 @@ function Product(itemProps: ItemProps) {
   );
 }
 
-export default Product;
+export default SingleProduct;
