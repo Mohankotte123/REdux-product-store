@@ -3,7 +3,8 @@ import { useSelector } from "react-redux";
 import { itemsState } from "store/productstore/productReducer";
 import { RootState } from "store/store";
 import { useRouter } from "next/router";
-import { Box, Flex, Grid, Image } from "@chakra-ui/react";
+import { Box, Button, Flex, Grid, IconButton, Image } from "@chakra-ui/react";
+import { ArrowBackIcon } from '@chakra-ui/icons'
 
 function Singlepdt() {
   const { Items }: itemsState = useSelector(
@@ -15,25 +16,37 @@ function Singlepdt() {
     const id = router.query.Singleproduct;
     if (id) {
       const tobeupdate = Items?.find((emp) => emp.id.toString() == id);
+     
       if (!tobeupdate) {
         alert("Product Not Find");
         router.replace("/");
       }
       setCurrent(tobeupdate);
     }
-  }, [router.query]);
+ 
+  }, [router.query]); 
+  const [Images,showImages] = useState(false)
+
+  function onClickAdd(){
+    showImages(true)
+  }
+  function onClickback(){
+    showImages(false)
+  }
   const [Current, setCurrent] = useState(null);
+  
 
   return (
     <Box
-      maxW="sm"
+      maxW="lg"
       margin="50px auto"
       justifyContent="center"
       borderWidth="10px"
       borderColor="blue.500"
       borderRadius="lg"
     >
-      <Image rounded="xl" src={Current && Current.productImage[0]} alt={"mohan"} />
+      <Image rounded="xl" w="100%" h="10%"justifyContent="center"
+        fit="cover"src={Current && Current.productImage[1]} alt={"mohan"} />
 
       <Box p="6">
         <Box
@@ -49,21 +62,38 @@ function Singlepdt() {
         <Box>${Current && Current.price}</Box>
         <Box>{Current && Current.Description}</Box>
       </Box>
-
-      <Flex align="center" justify="center" color="blue.500">
+      {Images?
+      
+      <Flex>
+        <IconButton
+        aria-label="addButton"
+        bg="black"
+        onClick={onClickback}
+        color="white"
+        _hover={{ bg: "cyan.600" }}
+        icon={<ArrowBackIcon />}
+      />
+      <Flex align="center" padding="5vh"  color="blue.500">
+        
         <Grid
           position="static"
           p="5"
           w="100%"
-          templateColumns={["repeat(1,1fr)", "repeat(5, 1fr)"]}
+          templateColumns={["repeat(2,1fr)", "repeat(5, 1fr)"]}
           gap={6}
         >
           {Current &&
             Current.productImage?.map((item, index) => {
-              return <Image w="100%" h="60%" fit="cover" src={item} />;
+              return <Image w="100%" height="50px" fit="cover" src={item} />;
             })}
         </Grid>
       </Flex>
+      </Flex>
+        :
+        <Flex justifyContent="center">
+        <Button onClick={onClickAdd}>Show Images</Button>
+        </Flex>
+        }
     </Box>
   );
 }

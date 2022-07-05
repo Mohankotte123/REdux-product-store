@@ -1,5 +1,5 @@
 import { RootState } from "../store/store";
-import Product from "../components/product";
+import Product from "../components/Product";
 import { Flex, Box, Grid } from "@chakra-ui/react";
 
 export type item = {
@@ -10,7 +10,7 @@ export type item = {
   id: number;
 };
 
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import { itemsState } from "../store/productstore/productReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { Action } from "redux";
