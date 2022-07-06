@@ -29,7 +29,7 @@ export type form = { add: boolean; isEdit: boolean };
 
 interface itemProps {
   addProduct: (addProduct: item) => void;
-  updateEmployee: (id, updatedpdtObj, Current) => void;
+  updateProduct: (id, updatedpdtObj, Current) => void;
 }
 
 function AddProduct(itemProps: itemProps) {
@@ -239,7 +239,7 @@ function AddProduct(itemProps: itemProps) {
                 align="center"
                 justifyContent="flex-end"
                 onClick={() => {
-                  itemProps.updateEmployee(
+                  itemProps.updateProduct(
                     Forms.Current.id,
                     {
                       productName: Name,

@@ -31,11 +31,11 @@ function Productform() {
   }, []);
 
   const addProduct = (Item: item) => {
-    let toBeUpdated: item[] = [...JSON.parse(JSON.stringify(Items)), Item];
-    dispatch(Update(toBeUpdated));
+    let updatedProducts: item[] = [...JSON.parse(JSON.stringify(Items)), Item];
+    dispatch(Update(updatedProducts));
     dispatch(Form(null));
   };
-  const updateEmployee = (id: number, updatedpdtObj: any, mul: string[]) => {
+  const updateProduct = (id: number, updatedpdtObj: any, mul: string[]) => {
     router.push("/");
     dispatch(Update(Items.map((pdt) => (pdt.id === id ? updatedpdtObj : pdt))));
     dispatch(
@@ -52,7 +52,7 @@ function Productform() {
   };
   return (
     <div>
-      <ProductForm addProduct={addProduct} updateEmployee={updateEmployee} />
+      <ProductForm addProduct={addProduct} updateProduct={updateProduct} />
     </div>
   );
 }
