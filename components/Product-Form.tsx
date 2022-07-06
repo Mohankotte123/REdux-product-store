@@ -196,7 +196,7 @@ function AddProduct(itemProps: itemProps) {
                 p=""
                 paddingTop="5vh"
                 w="100%"
-                templateColumns={["repeat(1,1fr)", "repeat(5, 4fr)"]}
+                templateColumns={["repeat(2,1fr)", "repeat(5, 4fr)"]}
                 gap={6}
               >
                 {Current?.map((item, index) => {
@@ -207,7 +207,7 @@ function AddProduct(itemProps: itemProps) {
                       color="black"
                       border-radius="5px"
                     >
-                      <Image height="50%" src={item} />
+                      <Image w="100%" height="50px"src={item} />
                       <Flex
                         cursor="pointer"
                         justifyContent={"center"}
