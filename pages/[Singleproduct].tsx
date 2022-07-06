@@ -46,7 +46,7 @@ function Singlepdt() {
       borderRadius="lg"
     >
       <Image rounded="xl" w="100%" h="10%"justifyContent="center"
-        fit="cover"src={Current && Current.productImage[1]} alt={"mohan"} />
+        fit="cover"src={Current && Current.productImage[0]} alt={"mohan"} />
 
       <Box p="6">
         <Box
