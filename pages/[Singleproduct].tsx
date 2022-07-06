@@ -22,18 +22,22 @@ function Singlepdt() {
         router.replace("/");
       }
       setCurrent(tobeupdate);
+      setImage(tobeupdate.productImage[0]);
+  
     }
  
   }, [router.query]); 
-  const [Images,showImages] = useState(false)
-
+  const [Current, setCurrent] = useState(null);
+  const [Images,showImages] = useState(false);
+  const [Image1,setImage] = useState("");
   function onClickAdd(){
     showImages(true)
   }
   function onClickback(){
     showImages(false)
   }
-  const [Current, setCurrent] = useState(null);
+  
+  
   
 
   return (
@@ -46,7 +50,7 @@ function Singlepdt() {
       borderRadius="lg"
     >
       <Image rounded="xl" w="100%" h="10%"justifyContent="center"
-        fit="cover"src={Current && Current.productImage[0]} alt={"mohan"} />
+        fit="cover"src={Image1} alt={"mohan"} ></Image>
 
       <Box p="6">
         <Box
@@ -84,7 +88,7 @@ function Singlepdt() {
         >
           {Current &&
             Current.productImage?.map((item, index) => {
-              return <Image w="100%" height="50px" fit="cover" src={item} />;
+              return <Image w="100%" height="50px" onClick={() => setImage(item)} fit="cover" src={item} />;
             })}
         </Grid>
       </Flex>

@@ -4,16 +4,11 @@ import { Action } from "redux";
 import { ThunkDispatch } from "redux-thunk";
 import { itemsState } from "store/productstore/productReducer";
 import { RootState } from "store/store";
-import AddProduct from "components/Product-Form";
+import ProductForm from "components/Product-Form";
 import { useRouter } from "next/router";
 import { Form, Get, Update } from "store/productstore/productAction";
 
-export type images = {
-  image1: string;
-  image2: string;
-  image3: string;
-  image4: string;
-};
+
 export type item = {
   productName: string;
   price: string;
@@ -57,7 +52,7 @@ function Productform() {
   };
   return (
     <div>
-      <AddProduct addProduct={addProduct} updateEmployee={updateEmployee} />
+      <ProductForm addProduct={addProduct} updateEmployee={updateEmployee} />
     </div>
   );
 }

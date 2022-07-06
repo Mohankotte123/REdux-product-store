@@ -230,6 +230,7 @@ function AddProduct(itemProps: itemProps) {
               placeholder="Product Description"
               borderColor="blue.500"
               value={Des}
+              mt="8px"
               onChange={(e) => DesChangeContent(e)}
             />
             {Forms.Current ? (
