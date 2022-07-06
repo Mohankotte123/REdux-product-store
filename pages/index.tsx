@@ -1,5 +1,5 @@
 import { RootState } from "../store/store";
-import Product from "../components/Product";
+
 import { Flex, Box, Grid } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { itemsState } from "../store/productstore/productReducer";
