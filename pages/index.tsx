@@ -1,5 +1,5 @@
 import { RootState } from "../store/store";
-import Product from "../components/Product"
+import Product from "../components/Product";
 import { Flex, Box, Grid } from "@chakra-ui/react";
 import Navbar from "../components/Navbar";
 import { itemsState } from "../store/productstore/productReducer";
@@ -67,7 +67,13 @@ export default function Home() {
             p="5"
             paddingTop="15vh"
             w="100%"
-            templateColumns={["repeat(1,1fr)","repeat(2, 1fr)","repeat(3, 1fr)","repeat(4, 1fr)", "repeat(5, 1fr)"]}
+            templateColumns={[
+              "repeat(1,1fr)",
+              "repeat(2, 1fr)",
+              "repeat(3, 1fr)",
+              "repeat(4, 1fr)",
+              "repeat(5, 1fr)",
+            ]}
             gap={6}
           >
             {Items?.map((item, index) => {

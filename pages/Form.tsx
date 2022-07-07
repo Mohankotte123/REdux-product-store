@@ -1,4 +1,4 @@
-import React, { useEffect,} from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Action } from "redux";
 import { ThunkDispatch } from "redux-thunk";
@@ -7,7 +7,6 @@ import { RootState } from "store/store";
 import ProductForm from "components/Product-Form";
 import { useRouter } from "next/router";
 import { Form, Get, Update } from "store/productstore/productAction";
-
 
 export type item = {
   productName: string;

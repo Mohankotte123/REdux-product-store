@@ -17,7 +17,11 @@ function SingleProduct(itemProps: ItemProps) {
         w="100%"
         h="60%"
         fit="cover"
-        src={itemProps.Item.productImage[0] ? itemProps.Item.productImage[0] : "/images/sairam.jpg"}
+        src={
+          itemProps.Item.productImage[0]
+            ? itemProps.Item.productImage[0]
+            : "/images/sairam.jpg"
+        }
       />
       <Box h="4.0%" p="2">
         <Box overflow="hidden">
